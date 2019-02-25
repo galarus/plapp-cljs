@@ -2,14 +2,20 @@
   "private": true,
   "scripts": {
     "dev": "shadow-cljs watch app",
-    "release": "shadow-cljs release app"
+    "release": "shadow-cljs release app",
+    "build": "babel src/js --out-dir src/gen"
   },
   "dependencies": {
     "create-react-class": "^15.6.3",
     "react": "^16.8.1",
-    "react-dom": "^16.8.1"
+    "react-dom": "^16.8.1",
+    "typeface-quicksand": "^0.0.71",
+    "typeface-roboto": "^0.0.54"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/preset-react": "^7.0.0",
     "shadow-cljs": "^2.7.30"
   }
 }

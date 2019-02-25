@@ -1,6 +1,8 @@
 {:source-paths ["src"]
 
- :dependencies [[reagent "0.8.1" :exclusions [cljsjs/react cljsjs/react-dom]]]
+ :dependencies [[rum "0.11.3" :exclusions [cljsjs/react cljsjs/react-dom]]
+                [cider/cider-nrepl "0.18.0"]
+                [org.roman01la/cljss "1.6.3"]]
 
  :builds {:app {:target :browser
                 :output-dir "public/js"
