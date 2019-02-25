@@ -78,3 +78,10 @@
                     {:name "three", :description " "}
                     {:name "five", :description " "}
                     {:name "six", :description " "}]}}))
+
+(def attr-items  (map #(:items %) (vals @attributes)))
+(defn get-names [items] (map #(:name %) items))
+(def attr-items-names (map get-names attr-items))
+(defn create-item-q [items] (zipmap (map keyword items) (repeat false)))
+(def attr-items-q (map create-item-q attr-items-names))
+(def search-q  (atom (zipmap (keys @attributes) attr-items-q)))
